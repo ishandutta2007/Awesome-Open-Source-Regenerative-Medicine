@@ -1,52 +1,79 @@
-# Awesome Open-Source Regenerative Medicine 🚀
+# 🚀 Awesome Open-Source Regenerative Medicine
 
-A curated list of awesome open-source software, toolkits, and hardware frameworks accelerating regenerative medicine, tissue engineering, stem cell research, and medical AI.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MouseLand/cellpose/main/cellpose/logo.png" width="400" alt="Awesome Regenerative Medicine Banner">
+</p>
 
-## Table of Contents
-- [Cell Segmentation & Morphological Analysis](#1-cell-segmentation--morphological-analysis)
-- [Medical Imaging, 3D Modelling & Scaffolding](#2-medical-imaging-3d-modelling--scaffolding)
-- [AI Frameworks for Medical Bioengineering](#3-ai-frameworks-for-medical-bioengineering)
-- [Genomics & Stem Cell Engineering](#4-genomics--stem-cell-engineering)
-- [Hardware Control & Bioprinting](#5-hardware-control--bioprinting)
-- [Contributing](#contributing)
-
----
-
-## 1. Cell Segmentation & Morphological Analysis
-*Tools designed to track, measure, and analyze cell phenotypic changes, density, and differentiation pathways.*
-
-*   [MouseLand/cellpose](https://github.com/MouseLand/cellpose) - A generalist, PyTorch-based algorithm for cellular segmentation. Tracks cell-surface symmetry and cell-to-nucleus ratios to monitor structural tissue growth.
-*   [CellProfiler/CellProfiler](https://github.com/CellProfiler/CellProfiler) - Python-based software for quantitative, high-throughput image analysis. Excellent for measuring morphological changes during stem cell differentiation over time.
-
-## 2. Medical Imaging, 3D Modelling & Scaffolding
-*Software platforms used to convert patient-specific imaging data into physical biomaterial constructs.*
-
-*   [Slicer/Slicer](https://github.com/Slicer/Slicer) - The primary platform for medical image informatics and 3D visualization. Used to convert patient CT/MRI scans into digital formats for bone and tissue defect repair.
-*   [ucl-mpie/TESL](https://github.com/ucl-mpie/TESL) - The Tissue Engineering Scaffold Library framework. Provides algorithmic open-access geometries for generating periodic and fractal lattice constructs.
-
-## 3. AI Frameworks for Medical Bioengineering
-*Deep learning toolkits tailored to analyze bio-imaging and predict biomaterial-cell interactions.*
-
-*   [Project-MONAI/MONAI](https://github.com/Project-MONAI/MONAI) - Medical Open Network for AI. A PyTorch-based framework optimized for healthcare imaging, allowing researchers to model organoid development and tissue regeneration.
-*   [OpenMEDLab/OpenMEDLab](https://github.com/OpenMEDLab/OpenMEDLab) - A repository hosting multi-modality foundation models for bioinformatics, digital pathology, and protein structure to predict drug-biomaterial compatibility.
-
-## 4. Genomics & Stem Cell Engineering
-*Frameworks used to map genomic variants and process data for personalized stem cell therapies.*
-
-*   [Bioconductor/Bioconductor](https://github.com/Bioconductor/Bioconductor) - R-based project containing tools to process high-throughput genomic data, tracking gene expression and DNA methylation in cellular engineering.
-*   [broadinstitute/gatk](https://github.com/broadinstitute/gatk) - Genome Analysis Toolkit. Industry-standard software for variant discovery and genotyping to map genetic variants before clinical cell manipulation.
-
-## 5. Hardware Control & Bioprinting
-*Open hardware firmware, blueprints, and slicing software modified to run custom bioprinters and bioreactors.*
-
-*   [bIUreactor/bIUreactor-software](https://github.com/bIUreactor/bIUreactor-software) - Control software and CAD blueprints for an open-source, modular 3D tissue culture bioreactor system.
-*   [slic3r/Slic3r](https://github.com/slic3r/Slic3r) - G-code generator for 3D printers widely adapted by bio-hackers and academic labs to orchestrate the layer-by-layer deposition of living cells and hydrogels.
+<p align="center">
+  <a href="https://github.com/sindresorhus/awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome"></a>
+  <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintained">
+  <img src="https://img.shields.io/github/license/ishan/Awesome-Open-Source-Regenerative-Medicine" alt="License">
+  <img src="https://img.shields.io/github/stars/ishan/Awesome-Open-Source-Regenerative-Medicine" alt="Stars">
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome">
+</p>
 
 ---
 
-## Contributing
-Contributions are welcome! Please read the `CONTRIBUTING.md` file before submitting a Pull Request to add a new open-source project to this list. 
+**Awesome Open-Source Regenerative Medicine** is a curated collection of world-class software, toolkits, and hardware designs. This repository is dedicated to empowering researchers in **Tissue Engineering**, **Stem Cell Biology**, **3D Bioprinting**, and **Medical AI** through open-source collaboration. 🧬🔬
 
-## License
-Licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License.
+> "The future of medicine is open, collaborative, and regenerative."
+
+---
+
+## 📑 Table of Contents
+- [🔍 Cell Segmentation & Morphological Analysis](#1-cell-segmentation--morphological-analysis)
+- [🦴 Medical Imaging, 3D Modelling & Scaffolding](#2-medical-imaging-3d-modelling--scaffolding)
+- [🤖 AI Frameworks for Medical Bioengineering](#3-ai-frameworks-for-medical-bioengineering)
+- [🧬 Genomics & Stem Cell Engineering](#4-genomics--stem-cell-engineering)
+- [🖨️ Hardware Control & Bioprinting](#5-hardware-control--bioprinting)
+- [🤝 Contributing](#contributing)
+
+---
+
+## 1. 🔍 Cell Segmentation & Morphological Analysis
+*Track, measure, and analyze cellular phenotypic changes and differentiation.*
+
+*   **[MouseLand/cellpose](https://github.com/MouseLand/cellpose)** - 🧠 Generalist, PyTorch-based algorithm for cellular segmentation. 
+    <br>![Cellpose Demo](https://www.cellpose.org/static/images/cellpose_gui.gif)
+*   **[CellProfiler/CellProfiler](https://github.com/CellProfiler/CellProfiler)** - 📊 Python-based software for quantitative, high-throughput image analysis.
+
+## 2. 🦴 Medical Imaging, 3D Modelling & Scaffolding
+*Convert patient imaging data into functional biomaterial constructs.*
+
+*   **[Slicer/Slicer](https://github.com/Slicer/Slicer)** - 🏥 The primary platform for medical image informatics and 3D visualization.
+*   **[ucl-mpie/TESL](https://github.com/ucl-mpie/TESL)** - 🏗️ Tissue Engineering Scaffold Library for generating complex geometries.
+
+## 3. 🤖 AI Frameworks for Medical Bioengineering
+*Deep learning toolkits for bio-imaging and biomaterial interactions.*
+
+*   **[Project-MONAI/MONAI](https://github.com/Project-MONAI/MONAI)** - ⚕️ Medical Open Network for AI. Optimized for healthcare imaging and tissue regeneration.
+    <br>![MONAI Logo](https://raw.githubusercontent.com/Project-MONAI/MONAI/dev/docs/images/monai-logo-color.png)
+*   **[OpenMEDLab/OpenMEDLab](https://github.com/OpenMEDLab/OpenMEDLab)** - 🔬 Multi-modality foundation models for bioinformatics.
+
+## 4. 🧬 Genomics & Stem Cell Engineering
+*Map genomic variants for personalized stem cell therapies.*
+
+*   **[Bioconductor/Bioconductor](https://github.com/Bioconductor/Bioconductor)** - 🧬 R-based tools for processing high-throughput genomic data.
+*   **[broadinstitute/gatk](https://github.com/broadinstitute/gatk)** - 🧩 Standard software for variant discovery and genotyping.
+
+## 5. 🖨️ Hardware Control & Bioprinting
+*Open hardware and firmware for custom bioprinters and bioreactors.*
+
+*   **[bIUreactor/bIUreactor-software](https://github.com/bIUreactor/bIUreactor-software)** - 🧪 Control software for modular 3D tissue culture bioreactors.
+*   **[slic3r/Slic3r](https://github.com/slic3r/Slic3r)** - 🧊 G-code generator for bioprinting living cells.
+
+---
+
+## 🤝 Contributing
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## 📜 License
+Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+---
+
+### 🏷️ Search Keywords
+`Regenerative Medicine`, `Tissue Engineering`, `Stem Cell Research`, `3D Bioprinting`, `Medical AI`, `Bioinformatics`, `Cell Segmentation`, `Open Source Healthcare`, `Bio-printing Software`, `Computational Biology`
+
+<p align="center">Made with ❤️ for the Bio-Open-Source Community</p>
 
