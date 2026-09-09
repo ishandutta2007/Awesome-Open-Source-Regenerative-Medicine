@@ -1,7 +1,7 @@
 # 🚀 Awesome Open-Source Regenerative Medicine
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MouseLand/cellpose/main/cellpose/logo.png" width="400" alt="Awesome Regenerative Medicine Banner">
+  <img src="assets/banner.svg" alt="Awesome Open-Source Regenerative Medicine Banner" width="100%">
 </p>
 
 <p align="center">

@@ -1,0 +1,295 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b19" />
+      <stop offset="50%" stop-color="#0b172a" />
+      <stop offset="100%" stop-color="#041b2d" />
+    </linearGradient>
+
+    <!-- Bio Glow Gradients -->
+    <linearGradient id="bio-cyan-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <linearGradient id="bio-green-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5a0" />
+      <stop offset="100%" stop-color="#00d9e9" />
+    </linearGradient>
+
+    <radialGradient id="cell-nucleus-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f5d4" stop-opacity="0.9" />
+      <stop offset="45%" stop-color="#00bbf9" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#4361ee" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="soft-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      letter-spacing: -0.5px;
+      fill: #ffffff;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      letter-spacing: 0.8px;
+      fill: #7dd3fc;
+    }
+    .tagline-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      fill: #94a3b8;
+    }
+    .badge-bg {
+      fill: rgba(14, 165, 233, 0.12);
+      stroke: rgba(56, 189, 248, 0.4);
+      stroke-width: 1.5;
+      rx: 8;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      fill: #38bdf8;
+    }
+
+    /* Dynamic CSS Keyframe Animations */
+    @keyframes pulse-ring {
+      0% { r: 60px; opacity: 0.8; }
+      50% { r: 85px; opacity: 0.25; }
+      100% { r: 60px; opacity: 0.8; }
+    }
+    @keyframes pulse-inner {
+      0% { r: 42px; opacity: 0.9; }
+      50% { r: 48px; opacity: 0.5; }
+      100% { r: 42px; opacity: 0.9; }
+    }
+    @keyframes rotate-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes float-particle-1 {
+      0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+      50% { transform: translateY(-18px) translateX(12px); opacity: 0.9; }
+    }
+    @keyframes float-particle-2 {
+      0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.4; }
+      50% { transform: translateY(22px) translateX(-14px); opacity: 1; }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 0.75; transform: scale(1.08); }
+    }
+    @keyframes ecg-dash {
+      0% { stroke-dashoffset: 600; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes dna-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .anim-pulse-ring {
+      animation: pulse-ring 4s ease-in-out infinite;
+      transform-origin: center;
+    }
+    .anim-pulse-inner {
+      animation: pulse-inner 4s ease-in-out infinite;
+      transform-origin: center;
+    }
+    .anim-rotate {
+      animation: rotate-slow 24s linear infinite;
+      transform-origin: 1020px 180px;
+    }
+    .anim-rotate-reverse {
+      animation: rotate-slow 16s linear infinite reverse;
+      transform-origin: 1020px 180px;
+    }
+    .anim-float-1 {
+      animation: float-particle-1 5s ease-in-out infinite;
+    }
+    .anim-float-2 {
+      animation: float-particle-2 6s ease-in-out infinite;
+    }
+    .anim-pulse-glow {
+      animation: pulse-glow 5s ease-in-out infinite;
+      transform-origin: 1020px 180px;
+    }
+    .anim-ecg {
+      stroke-dasharray: 600;
+      animation: ecg-dash 3.5s linear infinite;
+    }
+    .anim-dna {
+      animation: dna-float 4s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" rx="16" fill="url(#bg-grad)" />
+
+  <!-- Micro Grid Pattern Overlay for Bioengineering / Tech Look -->
+  <g opacity="0.08" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="120" y1="0" x2="120" y2="360" />
+    <line x1="240" y1="0" x2="240" y2="360" />
+    <line x1="360" y1="0" x2="360" y2="360" />
+    <line x1="480" y1="0" x2="480" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="720" y1="0" x2="720" y2="360" />
+    <line x1="840" y1="0" x2="840" y2="360" />
+    <line x1="960" y1="0" x2="960" y2="360" />
+    <line x1="1080" y1="0" x2="1080" y2="360" />
+  </g>
+
+  <!-- Hexagonal Scaffold Pattern (Tissue Scaffold Theme) in Background Right -->
+  <g opacity="0.12" stroke="#00f5a0" stroke-width="1.5" fill="none">
+    <polygon points="980,110 1020,90 1060,110 1060,150 1020,170 980,150" />
+    <polygon points="1060,150 1100,130 1140,150 1140,190 1100,210 1060,190" />
+    <polygon points="900,150 940,130 980,150 980,190 940,210 900,190" />
+    <polygon points="980,190 1020,170 1060,190 1060,230 1020,250 980,230" />
+    <polygon points="1060,230 1100,210 1140,230 1140,270 1100,290 1060,270" />
+    <polygon points="900,230 940,210 980,230 980,270 940,290 900,270" />
+  </g>
+
+  <!-- Flowing Wave / Regenerative Pulse Track across bottom -->
+  <path d="M 0,300 Q 150,280 300,300 T 600,295 T 900,305 T 1200,295" fill="none" stroke="#00d9e9" stroke-width="2" opacity="0.2" />
+  <path class="anim-ecg" d="M 0,330 L 500,330 L 520,310 L 535,345 L 555,275 L 575,340 L 590,320 L 610,330 L 1200,330" fill="none" stroke="#00f5a0" stroke-width="2.5" opacity="0.45" />
+
+  <!-- LEFT BRANDING / TEXT SECTION -->
+  <!-- Top Category Tag -->
+  <g transform="translate(80, 52)">
+    <rect width="186" height="28" class="badge-bg" />
+    <circle cx="15" cy="14" r="4" fill="#00f5a0" />
+    <text x="28" y="19" class="badge-text">OPEN SCIENCE &amp; BIO-AI</text>
+  </g>
+
+  <!-- Title Text with Gradient Shading -->
+  <g transform="translate(80, 130)">
+    <text class="title-text">
+      Awesome Open-Source
+    </text>
+    <text y="50" class="title-text" fill="url(#bio-green-grad)">
+      Regenerative Medicine
+    </text>
+  </g>
+
+  <!-- Subtitle / Mission Statement -->
+  <g transform="translate(80, 230)">
+    <text class="subtitle-text">
+      Tissue Engineering • Stem Cell Biology • 3D Bioprinting • Medical Imaging
+    </text>
+    <text y="28" class="tagline-text">
+      A curated index of world-class software, toolkits, datasets, and computational biology platforms.
+    </text>
+  </g>
+
+  <!-- Feature Pill Tags -->
+  <g transform="translate(80, 290)">
+    <!-- Tag 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="124" height="28" rx="14" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-opacity="0.4" />
+      <text x="62" y="18" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#bae6fd">🧬 Stem Cells</text>
+    </g>
+    <!-- Tag 2 -->
+    <g transform="translate(136, 0)">
+      <rect width="134" height="28" rx="14" fill="#047857" fill-opacity="0.3" stroke="#34d399" stroke-opacity="0.4" />
+      <text x="67" y="18" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#a7f3d0">🖨️ 3D Bioprinting</text>
+    </g>
+    <!-- Tag 3 -->
+    <g transform="translate(282, 0)">
+      <rect width="136" height="28" rx="14" fill="#4338ca" fill-opacity="0.3" stroke="#818cf8" stroke-opacity="0.4" />
+      <text x="68" y="18" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#c7d2fe">🔬 Bio-Imaging</text>
+    </g>
+    <!-- Tag 4 -->
+    <g transform="translate(430, 0)">
+      <rect width="120" height="28" rx="14" fill="#0f766e" fill-opacity="0.3" stroke="#2dd4bf" stroke-opacity="0.4" />
+      <text x="60" y="18" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#99f6e4">🤖 Medical AI</text>
+    </g>
+  </g>
+
+  <!-- RIGHT GRAPHIC: Dynamic Cellular & DNA Regenerative Emblem -->
+  <!-- Ambient Glow Behind Cell -->
+  <circle cx="1020" cy="180" r="110" fill="url(#cell-nucleus-grad)" class="anim-pulse-glow" filter="url(#soft-glow)" />
+
+  <!-- Outer Orbit Rings with Dynamic Rotation -->
+  <g class="anim-rotate">
+    <circle cx="1020" cy="180" r="105" fill="none" stroke="#00f2fe" stroke-width="1.5" stroke-dasharray="8 14" opacity="0.6" />
+    <circle cx="1125" cy="180" r="5" fill="#00f5a0" filter="url(#glow)" />
+    <circle cx="915" cy="180" r="4" fill="#38bdf8" filter="url(#glow)" />
+  </g>
+
+  <g class="anim-rotate-reverse">
+    <circle cx="1020" cy="180" r="78" fill="none" stroke="#a18cd1" stroke-width="1.8" stroke-dasharray="14 10" opacity="0.6" />
+    <circle cx="1020" cy="102" r="5.5" fill="#fbc2eb" filter="url(#glow)" />
+    <circle cx="1020" cy="258" r="4" fill="#00f5d4" filter="url(#glow)" />
+  </g>
+
+  <!-- Cellular Membrane Pulsing -->
+  <circle cx="1020" cy="180" class="anim-pulse-ring" fill="none" stroke="#00f5a0" stroke-width="2.5" filter="url(#glow)" />
+  <circle cx="1020" cy="180" class="anim-pulse-inner" fill="#0369a1" fill-opacity="0.4" stroke="#38bdf8" stroke-width="2" />
+
+  <!-- Cell Nucleus Core -->
+  <circle cx="1020" cy="180" r="28" fill="url(#bio-cyan-grad)" filter="url(#glow)" />
+
+  <!-- Stylized DNA Strand across Central Nucleus -->
+  <g class="anim-dna" transform="translate(1004, 160)" stroke="#ffffff" stroke-width="2" stroke-linecap="round">
+    <!-- Double Helix Base rungs and nodes -->
+    <line x1="4" y1="6" x2="28" y2="10" stroke="#00f5a0" stroke-width="2" opacity="0.85" />
+    <circle cx="4" cy="6" r="3" fill="#00f5a0" />
+    <circle cx="28" cy="10" r="3" fill="#38bdf8" />
+
+    <line x1="8" y1="20" x2="24" y2="20" stroke="#ffffff" stroke-width="2" opacity="0.9" />
+    <circle cx="8" cy="20" r="2.5" fill="#ffffff" />
+    <circle cx="24" cy="20" r="2.5" fill="#ffffff" />
+
+    <line x1="4" y1="34" x2="28" y2="30" stroke="#fbc2eb" stroke-width="2" opacity="0.85" />
+    <circle cx="4" cy="34" r="3" fill="#a18cd1" />
+    <circle cx="28" cy="30" r="3" fill="#fbc2eb" />
+  </g>
+
+  <!-- Floating Bio Particles / Exosomes -->
+  <g class="anim-float-1">
+    <circle cx="880" cy="95" r="4.5" fill="#00f5d4" filter="url(#glow)" />
+    <circle cx="1140" cy="100" r="3.5" fill="#38bdf8" filter="url(#glow)" />
+    <circle cx="940" cy="275" r="5" fill="#a7f3d0" filter="url(#glow)" />
+  </g>
+
+  <g class="anim-float-2">
+    <circle cx="1130" cy="260" r="4" fill="#34d399" filter="url(#glow)" />
+    <circle cx="890" cy="200" r="3" fill="#67e8f9" filter="url(#glow)" />
+    <circle cx="1060" cy="65" r="4.5" fill="#818cf8" filter="url(#glow)" />
+  </g>
+
+  <!-- Corner Border Accents (High-Tech Framing) -->
+  <path d="M 16,40 L 16,16 L 40,16" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" opacity="0.7" />
+  <path d="M 1184,40 L 1184,16 L 1160,16" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" opacity="0.7" />
+  <path d="M 16,320 L 16,344 L 40,344" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" opacity="0.7" />
+  <path d="M 1184,320 L 1184,344 L 1160,344" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" opacity="0.7" />
+</svg>
